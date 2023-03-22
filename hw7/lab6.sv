@@ -15,8 +15,8 @@ module lab6 ();
 			4'b0110: return 8'b1011_1111;
 			4'b0111: return 8'b0111_1111;
 // COMPLETED 
-        endcase
-    endfunction
+		endcase
+	endfunction
 
 	function logic [2:0] encoder8to3 (logic en_b, logic [7:0] in_b); // Completed 
 		casex({en_b, in_b})
@@ -33,17 +33,17 @@ module lab6 ();
 			9'b0_01111111: return 3'b111;
 
    // COMPLETED 
-        endcase
-    endfunction
+		endcase
+	endfunction
 
-    logic [2:0] in, out;
-    logic       clk;
+	logic [2:0] in, out;
+	logic       clk;
 
-    assign out = encoder8to3(clk, decoder3to8(clk, in)); // Completed 
+	assign out = encoder8to3(clk, decoder3to8(clk, in)); // Completed 
 
-    initial begin
-        clk = 1'b1;
-        in  = 3'b111;
+	initial begin
+		clk = 1'b1;
+		in  = 3'b111;
         forever #5 clk = ~clk;
     end
 
@@ -53,6 +53,6 @@ module lab6 ();
     end
 
     initial
-        #80 $finish();
+	    #80 $finish();
 
 endmodule
