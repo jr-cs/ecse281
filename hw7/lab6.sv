@@ -22,6 +22,7 @@ module lab6 ();
 		casex({en_b, in_b})
 // Right side is a three-bit truth table like left side of decoder
 // Uses slide 9 truth table for 74x138 encoder from recitation slides for left side and right side
+// Talked to Rohan about my truth table; turned out that my outputs were inverted
 			9'b1_xxxxxxxx: return 3'b111;
 			9'b0_xxxxxxx0: return 3'b111;
 			9'b0_xxxxxx01: return 3'b110;
