@@ -23,14 +23,14 @@ module lab6 ();
 // Right side is a three-bit truth table like left side of decoder
 // Uses slide 9 truth table for 74x138 encoder from recitation slides for left side and right side
 			9'b1_xxxxxxxx: return 3'b111;
-			9'b0_xxxxxxx0: return 3'b000;
-			9'b0_xxxxxx01: return 3'b001;
-			9'b0_xxxxx011: return 3'b010;
-			9'b0_xxxx0111: return 3'b011;
-			9'b0_xxx01111: return 3'b100;
-			9'b0_xx011111: return 3'b101;
-			9'b0_x0111111: return 3'b110;
-			9'b0_01111111: return 3'b111;
+			9'b0_xxxxxxx0: return 3'b111;
+			9'b0_xxxxxx01: return 3'b110;
+			9'b0_xxxxx011: return 3'b101;
+			9'b0_xxxx0111: return 3'b100;
+			9'b0_xxx01111: return 3'b011;
+			9'b0_xx011111: return 3'b010;
+			9'b0_x0111111: return 3'b001;
+			9'b0_01111111: return 3'b000;
 
    // COMPLETED 
 		endcase
